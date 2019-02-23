@@ -34,7 +34,7 @@
       {{ if eq . $paginator }}
       <li>{{ .PageNumber }}</li>
       {{ else }}
-      <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+      <li><a href="{{ .URL | relURL }}">{{ .PageNumber }}</a></li>
       {{ end }}
     {{ end }}
   {{ end }}
